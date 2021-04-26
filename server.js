@@ -20,6 +20,12 @@ mongoose.connect("mongodb://localhost/budget", {
   useFindAndModify: false
 });
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://dbgreymain:<password>@cluster0.igmkm.mongodb.net/test";
+mongoose.connect(MONGODB_URI,{  
+    useNewUrlParser:true,
+    useFindAndModify:false
+})
+
 // routes
 app.use(require("./routes/api.js"));
 
