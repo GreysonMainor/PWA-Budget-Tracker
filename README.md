@@ -1,7 +1,7 @@
 # PWA-Budget-Tracker
-![Getting Started]()
-![Getting Started]()
-![Getting Started]()
+![Getting Started](./assets/PWA-app-screenshot.png)
+![Getting Started](./assets/PWA-screenshot-heroku.png)
+![Getting Started](./assets/PWA-screenshot1.png)
 
 
 ## Description
