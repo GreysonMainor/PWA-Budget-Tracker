@@ -14,16 +14,16 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false
+// });
 
-//  var MONGODB_URI = process.env.MONGODB_URI || "mongodb://dbmain:password1998@pwa-budget-tracker.yxzjk.mongodb.net/admin";
-//  mongoose.connect(MONGODB_URI,{  
-//      useNewUrlParser:true,
-//      useFindAndModify:false
-//  })
+ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://dbmain:password1998@pwa-budget-tracker.yxzjk.mongodb.net/admin";
+ mongoose.connect(MONGODB_URI,{  
+     useNewUrlParser:true,
+     useFindAndModify:false
+ });
 
 // routes
 app.use(require("./routes/api.js"));
