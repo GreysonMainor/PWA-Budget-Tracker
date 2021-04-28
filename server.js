@@ -21,11 +21,22 @@ app.use(express.static("public"));
 // });
 app.use(require("./routes/api.js"));
 
- var MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://dbmain:password1998@pwa-budget-tracker.yxzjk.mongodb.net/test";
- mongoose.connect(MONGODB_URI,{  
-     useNewUrlParser:true,
-     useFindAndModify:false
- });
+//  var MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://dbmain:password1998@pwa-budget-tracker.yxzjk.mongodb.net/test";
+//  mongoose.connect(MONGODB_URI,{  
+//      useNewUrlParser:true,
+//      useFindAndModify:false
+//  });
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb+srv://dbmain:password1998@pwa-budget-tracker.yxzjk.mongodb.net/test',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
+
 
 // routes
 // app.use(require("./routes/api.js"));
